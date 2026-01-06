@@ -12,16 +12,6 @@ body {
   min-height: 100vh;
 }
 
-@layer components {
-  .btn-primary {
-    @apply inline-flex items-center justify-center px-4 py-2 bg-slate-900 text-white rounded-lg font-medium hover:bg-slate-800 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2;
-  }
-
-  .card {
-    @apply bg-white rounded-xl border border-slate-200 shadow-sm p-6 hover:shadow-md transition-shadow;
-  }
-}
-
 @layer utilities {
   .animate-enter {
     animation: enter 0.4s ease-out forwards;

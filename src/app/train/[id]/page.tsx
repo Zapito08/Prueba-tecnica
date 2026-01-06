@@ -96,9 +96,16 @@ export default function TrainPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 font-sans text-slate-800 flex flex-col">
+<<<<<<< HEAD
       <header className="px-6 py-4 md:px-8 md:py-6 flex items-center justify-between bg-white/50 backdrop-blur-sm sticky top-0 z-10 border-b border-slate-200/50">
         <div className="flex items-center gap-4">
           <button
+=======
+      {/* Header */}
+      <header className="px-6 py-4 md:px-8 md:py-6 flex items-center justify-between bg-white/50 backdrop-blur-sm sticky top-0 z-10 border-b border-slate-200/50">
+        <div className="flex items-center gap-4">
+          <button 
+>>>>>>> c93dd3af6d8c756196dadbd7d782efbec2605d52
             onClick={() => router.push('/')}
             className="p-3 bg-white rounded-2xl shadow-sm border border-slate-100 text-slate-400 hover:text-blue-600 hover:scale-105 transition-all"
           >
@@ -111,9 +118,23 @@ export default function TrainPage() {
             <p className="text-sm text-slate-500 font-medium ml-1">{assistant.language} • {assistant.tone}</p>
           </div>
         </div>
+<<<<<<< HEAD
       </header>
 
       <main className="flex-1 max-w-[1600px] mx-auto w-full p-4 md:p-6 grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 h-[calc(100vh-100px)]">
+=======
+        
+        <button
+            onClick={handleSaveTraining}
+            className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 md:px-6 md:py-3 rounded-2xl font-bold flex items-center gap-2 transition-all shadow-lg shadow-green-200 active:scale-95"
+          >
+            <Save size={20} /> <span className="hidden md:inline">Guardar Cambios</span>
+        </button>
+      </header>
+
+      <main className="flex-1 max-w-[1600px] mx-auto w-full p-4 md:p-6 grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 h-[calc(100vh-100px)]">
+        {/* Editor Section */}
+>>>>>>> c93dd3af6d8c756196dadbd7d782efbec2605d52
         <div className="bg-white rounded-3xl p-6 md:p-8 shadow-xl shadow-slate-200/50 border border-white/50 flex flex-col gap-4 animate-enter h-full">
           <div className="flex items-center gap-3 border-b border-slate-100 pb-4">
             <div className="bg-blue-100 p-2 rounded-xl">
@@ -127,13 +148,19 @@ export default function TrainPage() {
           <textarea
             value={rules}
             onChange={(e) => setRules(e.target.value)}
+<<<<<<< HEAD
             className="flex-1 bg-slate-50 border border-slate-200 p-6 rounded-2xl outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all resize-none text-sm leading-relaxed font-mono text-slate-600"
             placeholder="Escribe aquí las instrucciones de comportamiento. Por ejemplo: 'Responde de forma breve y directa. Si el cliente pregunta por precios, pide primero su correo electrónico. Mantén un tono profesional pero cercano.'"
+=======
+            className="flex-1 bg-slate-50 border border-slate-200 p-6 rounded-2xl outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all resize-none text-sm leading-relaxed font-mono text-slate-600" 
+            placeholder="Ej. Eres un asistente experto en soporte técnico. Tu tono es amable y paciente. Siempre debes preguntar por el número de ticket antes de comenzar..."
+>>>>>>> c93dd3af6d8c756196dadbd7d782efbec2605d52
           ></textarea>
           <div className="flex justify-between items-center text-xs text-slate-400 px-2">
              <span>Markdown soportado</span>
              <span>{rules.length} caracteres</span>
           </div>
+<<<<<<< HEAD
           <div className="flex justify-end pt-2">
             <button
               onClick={handleSaveTraining}
@@ -144,6 +171,11 @@ export default function TrainPage() {
           </div>
         </div>
 
+=======
+        </div>
+
+        {/* Chat Preview Section */}
+>>>>>>> c93dd3af6d8c756196dadbd7d782efbec2605d52
         <div className="bg-white rounded-3xl shadow-xl shadow-slate-200/50 border border-white/50 flex flex-col overflow-hidden animate-enter h-full" style={{animationDelay: '0.1s'}}>
           <div className="p-4 md:p-6 border-b border-slate-100 bg-slate-50/50 flex justify-between items-center">
              <h3 className="font-bold text-slate-700 flex items-center gap-2">
@@ -170,8 +202,13 @@ export default function TrainPage() {
                      {m.role === 'user' ? <User size={14} /> : <Bot size={14} />}
                    </div>
                    <div className={`p-4 rounded-2xl shadow-sm text-sm leading-relaxed ${
+<<<<<<< HEAD
                      m.role === 'user'
                        ? 'bg-blue-600 text-white rounded-tr-none'
+=======
+                     m.role === 'user' 
+                       ? 'bg-blue-600 text-white rounded-tr-none' 
+>>>>>>> c93dd3af6d8c756196dadbd7d782efbec2605d52
                        : 'bg-white text-slate-700 border border-slate-100 rounded-tl-none'
                    }`}>
                      {m.content}
